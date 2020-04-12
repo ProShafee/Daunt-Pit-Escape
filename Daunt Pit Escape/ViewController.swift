@@ -711,7 +711,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.ButtonOption2.isEnabled = false
                 
                 self.ButtonOption1.alpha = 1
-                self.ButtonOption2.alpha = 0.5
+                self.ButtonOption2.alpha = 1
                 
             }
         }
@@ -1084,7 +1084,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 21) {
                 
-                let i = item(name: "*", message: "you hear a radio saying get back to the hills base")
+                let i = item(name: "Radio", message: "get back to the hills base")
                 self.itemArray.append(i)
                 self.tableView.reloadData()
                 self.scrollToBottom()
@@ -1119,6 +1119,564 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.ButtonOption2.alpha = 1
                 
             }
+            
+        }
+        else if(answerInput == "Trust charles it was bills")
+        {
+            
+            let i = item(name: "You", message: answerInput)
+            self.itemArray.append(i)
+            self.tableView.reloadData()
+            self.scrollToBottom()
+            
+            
+            self.ButtonOption1.isEnabled = false
+            self.ButtonOption2.isEnabled = false
+            
+            self.ButtonOption2.alpha = 0.5
+            self.ButtonOption1.alpha = 0.5
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                
+                let i = item(name: "Radio", message: "Get here NOW")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                
+                let i = item(name: "charles", message: "I have a duty to perform and now perform quick")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+                
+                let i = item(name: "charles", message: "Just for your satisfaction im a SUDO worker")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 12) {
+                
+                let i = item(name: "charles", message: "Good bye mother f******")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+                
+            }
+            
+        }
+        
+        else if(answerInput == "Kill Charles with your scissors")
+        {
+            
+            let i = item(name: "You", message: answerInput)
+            self.itemArray.append(i)
+            self.tableView.reloadData()
+            self.scrollToBottom()
+            
+            
+            self.ButtonOption1.isEnabled = false
+            self.ButtonOption2.isEnabled = false
+            
+            self.ButtonOption2.alpha = 0.5
+            self.ButtonOption1.alpha = 0.5
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                
+                let i = item(name: "Radio", message: "The Car is about to CRASH!")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                self.ButtonOption1.setTitle("Pull hand brake", for: .normal)
+                
+                self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (Timer) in
+                    
+                    if(self.time > 0){
+                        self.time = self.time - 1
+                        self.ButtonOption2.setTitle(String(self.time), for: .normal)
+                    }
+                    else{
+                        Timer.invalidate()
+                        print("dead")
+                        self.time = 5
+                    }
+                })
+                
+                
+                self.ButtonOption1.isEnabled = true
+                self.ButtonOption2.isEnabled = false
+                
+                self.ButtonOption1.alpha = 1
+                self.ButtonOption2.alpha = 1
+                
+                
+            }
+            
+            
+        }
+        else if(answerInput == "Pull hand brake")
+        {
+            timer.invalidate()
+            time = 5
+            
+            
+            let i = item(name: "You", message: answerInput)
+            self.itemArray.append(i)
+            self.tableView.reloadData()
+            self.scrollToBottom()
+            
+            
+            self.ButtonOption1.isEnabled = false
+            self.ButtonOption2.isEnabled = false
+            
+            self.ButtonOption2.alpha = 0.5
+            self.ButtonOption1.alpha = 0.5
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                
+                let i = item(name: "*", message: "Small crash, the car stopped")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                
+                let i = item(name: "*", message: "you are still alive")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                
+                let i = item(name: "*", message: "you found a note in charles lap, says")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+                
+                let i = item(name: "*", message: "my master oh my master I surrender my desires for yours. I will never betray and will respect the privacy of tower of life")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 12) {
+                
+                let i = item(name: "*", message: "my Code 9098")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                self.ButtonOption1.setTitle("Wear charles uniform", for: .normal)
+                self.ButtonOption2.setTitle("-", for: .normal)
+                
+                self.ButtonOption1.isEnabled = true
+                self.ButtonOption2.isEnabled = false
+                
+                self.ButtonOption1.alpha = 1
+                self.ButtonOption2.alpha = 0.5
+                
+            }
+         
+            
+        }
+        
+        else if(answerInput == "Wear charles uniform")
+        {
+            timer.invalidate()
+            time = 5
+            
+            
+            let i = item(name: "You", message: answerInput)
+            self.itemArray.append(i)
+            self.tableView.reloadData()
+            self.scrollToBottom()
+            
+            
+            self.ButtonOption1.isEnabled = false
+            self.ButtonOption2.isEnabled = false
+            
+            self.ButtonOption2.alpha = 0.5
+            self.ButtonOption1.alpha = 0.5
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                
+                let i = item(name: "*", message: "You wore charles uniform and mask to hide your identity")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                self.ButtonOption1.setTitle("Go to hills base", for: .normal)
+                self.ButtonOption2.setTitle("-", for: .normal)
+                
+                self.ButtonOption1.isEnabled = true
+                self.ButtonOption2.isEnabled = false
+                
+                self.ButtonOption1.alpha = 1
+                self.ButtonOption2.alpha = 0.5
+                
+                
+                
+            }
+            
+           
+            
+        }
+        else if(answerInput == "Go to hills base")
+        {
+            timer.invalidate()
+            time = 5
+            
+            
+            let i = item(name: "You", message: answerInput)
+            self.itemArray.append(i)
+            self.tableView.reloadData()
+            self.scrollToBottom()
+            
+            
+            self.ButtonOption1.isEnabled = false
+            self.ButtonOption2.isEnabled = false
+            
+            self.ButtonOption2.alpha = 0.5
+            self.ButtonOption1.alpha = 0.5
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                
+                let i = item(name: "*", message: "After reaching the hills base")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                
+                let i = item(name: "*", message: "You see a lot of zombies on the front walls of the base")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                self.ButtonOption1.setTitle("Throw a stone opposite of the base", for: .normal)
+                self.ButtonOption2.setTitle("-", for: .normal)
+                
+                self.ButtonOption1.isEnabled = true
+                self.ButtonOption2.isEnabled = false
+                
+                self.ButtonOption1.alpha = 1
+                self.ButtonOption2.alpha = 0.5
+                
+            }
+            
+            
+            
+        }
+        else if(answerInput == "Throw a stone opposite of the base")
+        {
+            timer.invalidate()
+            time = 5
+            
+            
+            let i = item(name: "You", message: answerInput)
+            self.itemArray.append(i)
+            self.tableView.reloadData()
+            self.scrollToBottom()
+            
+            
+            self.ButtonOption1.isEnabled = false
+            self.ButtonOption2.isEnabled = false
+            
+            self.ButtonOption2.alpha = 0.5
+            self.ButtonOption1.alpha = 0.5
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                
+                let i = item(name: "*", message: "You see all zombies going to the oposite side")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                
+                let i = item(name: "*", message: "and you silently rush your way to the base door")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+   
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+                
+                let i = item(name: "*", message: "Press in the code")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                self.ButtonOption1.setTitle("code: 9 0 9 8", for: .normal)
+                self.ButtonOption2.setTitle("code: 9 0 9 0", for: .normal)
+                
+                self.ButtonOption1.isEnabled = true
+                self.ButtonOption2.isEnabled = false
+                
+                self.ButtonOption1.alpha = 1
+                self.ButtonOption2.alpha = 0.5
+                
+            }
+            
+            
+            
+        }
+        else if(answerInput == "code: 9 0 9 0")
+        {
+
+            
+            
+            let i = item(name: "You", message: answerInput)
+            self.itemArray.append(i)
+            self.tableView.reloadData()
+            self.scrollToBottom()
+            
+            
+            self.ButtonOption1.isEnabled = false
+            self.ButtonOption2.isEnabled = false
+            
+            self.ButtonOption2.alpha = 0.5
+            self.ButtonOption1.alpha = 0.5
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                
+                let i = item(name: "*", message: "*SIREN ON*")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+            }
+            
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                
+                let i = item(name: "*", message: "Looks like the zombies were actually protecting the base")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+                
+                let i = item(name: "*", message: "*Zombie Rushed and bite you by your throat*")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+            }
+            
+            
+            
+        }
+        else if(answerInput == "code: 9 0 9 8")
+        {
+   
+            
+            let i = item(name: "You", message: answerInput)
+            self.itemArray.append(i)
+            self.tableView.reloadData()
+            self.scrollToBottom()
+            
+            
+            self.ButtonOption1.isEnabled = false
+            self.ButtonOption2.isEnabled = false
+            
+            self.ButtonOption2.alpha = 0.5
+            self.ButtonOption1.alpha = 0.5
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                
+                let i = item(name: "*", message: "a person in doctor suit and a mask greets you and lets you in, his name tag says Gary")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                
+                let i = item(name: "Dr. Gary", message: "Good job on killing the 16th subject")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+                
+                let i = item(name: "Dr. Gary", message: "Lets go we have a important meeting with the master")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 12) {
+                
+                let i = item(name: "*", message: "You walk inside the main building")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "*", message: "You go and see 100 people with a zombie mask waiting for the master")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "*", message: "Master comes and people chant")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "*", message: "my master oh my master We surrender my desires for yours. We will never betray and will respect the privacy of tower of life")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "*", message: "my master oh my master We surrender my desires for yours. We will never betray and will respect the privacy of tower of life")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "Master", message: "he tower has kept us alive")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "Master", message: "The tower has made us what we are")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "Master", message: "We must keep the tower safe")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+          
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "Master", message: "tower teaches to never forget the history of our people and the actions or else face death")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "*", message: "master waves his hand over the tower wall and out comes a green antidote")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "Master", message: "This antidote is our power and the tower protects it with the master help")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "*", message: "He keeps back the antidote")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "Master", message: "You all shall go and have your deserved rest")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 15) {
+                
+                let i = item(name: "*", message: "after leading everyone else, Gary Leads you to your(charles) room")
+                self.itemArray.append(i)
+                self.tableView.reloadData()
+                self.scrollToBottom()
+                
+                
+            }
+            
+
+            
             
         }
 
